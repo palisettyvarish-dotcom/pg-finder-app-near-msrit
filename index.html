@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>findmyhome | Verified PGs & Hostels Near MSRIT College Bangalore</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 CDN for Crisp Modern Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       TOP LIVE ALERT BANNER (MSRIT Admission & Semester Update)
+       ============================================================ -->
+  <div class="msrit-alert-bar">
+    <span class="pulse-dot"></span>
+    <span>
+      <b>MSRIT 2026-27 Semester Bookings Live:</b> Single & Double sharing rooms near Gate 1 & Gate 2 filling fast!
+      <a href="#listings">Check Live Availability &rarr;</a>
+    </span>
+  </div>
+
+  <!-- ============================================================
+       STICKY GLASSMORPHIC NAVIGATION BAR
+       ============================================================ -->
+  <header class="site-header">
+    <div class="nav-container">
+      <!-- Brand Logo in Bold Font as Requested -->
+      <a href="#" class="brand-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span style="font-weight: 900; letter-spacing: -0.05em; color: #0f172a;">find<span style="color: #ea580c;">my</span>home</span>
+        </div>
+        <span class="campus-pill">MSRIT Campus</span>
+      </a>
+
+      <!-- Centered Pill Nav Links -->
+      <nav class="nav-links">
+        <a href="#listings" class="nav-link active">Explore PGs</a>
+        <a href="#mapGuide" class="nav-link">Campus Map</a>
+        <a href="#calculator" class="nav-link">Rent Calculator</a>
+        <a href="#reviews" class="nav-link">Google Reviews</a>
+        <a href="#faq" class="nav-link">Student FAQ</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button id="btnViewEnquiries" class="compare-badge-btn" title="View Supabase Enquiries (Backend)">
+          <i class="fa-solid fa-database" style="color: #10b981;"></i>
+          <span>Backend</span>
+          <span id="enquiriesCountBadge" class="compare-count" style="background: #10b981;">0</span>
+        </button>
+        <button id="navCompareBtn" class="compare-badge-btn" title="Open Side-by-Side Comparison">
+          <i class="fa-solid fa-code-compare"></i>
+          <span>Compare</span>
+          <span id="navCompareCount" class="compare-count">0</span>
+        </button>
+        <a href="#listings" class="btn-contact">
+          <span>Find PG</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO SECTION (Inspired by Dwellio Warm Sunset Architecture)
+       ============================================================ -->
+  <section class="hero-wrapper">
+    <div class="hero-card">
+      <!-- Full-Bleed Twilight Architectural Background Media -->
+      <div class="hero-bg-media">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85" alt="Warm Modern Architectural Home at Dusk">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <!-- Hero Top & Headline Content -->
+      <div class="hero-content">
+        <div class="hero-badge-pill">
+          <span class="pill-dot"></span>
+          BUILT FOR MSRITIANS &bull; 100% VERIFIED PG LIVING
+        </div>
+
+        <h1 class="hero-title">
+          Find Your <br>
+          <span class="brand-accent">findmyhome.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Discover verified student hostels & luxury PGs within a 2-5 minute walk of Ramaiah Institute of Technology, Bangalore. Live room availability, transparent pricing, and genuine Google reviews.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#listings" class="btn-hero-primary">
+            <span>Explore Hostels & PGs</span>
+            <div class="arrow-circle">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+          <a href="#mapGuide" class="btn-hero-secondary">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>MSRIT Distance Map</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Bottom Row: Social Proof + Floating Card (Matching Dwellio Screenshot) -->
+      <div class="hero-bottom-row">
+        <!-- Bottom Left: Avatar Stack & Testimonial -->
+        <div class="hero-social-proof">
+          <div class="avatar-stack">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Student">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Student">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Student">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Student">
+          </div>
+          <div class="social-proof-text">
+            <strong>1,850+ MSRIT Students</strong> settled happily.<br>
+            Rated <b>4.8/5</b> across 1,200+ Google Reviews.
+          </div>
+        </div>
+
+        <!-- Bottom Right: Floating Glass Preview Card (Matching the "Formula" card in Dwellio) -->
+        <div class="hero-floating-card">
+          <div class="floating-thumb">
+            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=240&q=80" alt="Featured Residence">
+          </div>
+          <div class="floating-card-body">
+            <span class="floating-tag">TOP RATED 2026</span>
+            <div class="floating-card-title">Stanza Living Poznan (180m from Gate 1)</div>
+            <a href="#listings" class="floating-card-link">
+              <span>View Live Beds</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       QUICK SEARCH & FILTER DOCK (Floating Card over hero seam)
+       ============================================================ -->
+  <section class="search-dock-section">
+    <div class="container">
+      <div class="search-dock-card">
+        <!-- Dock Header: Title + Gate Selector Pills -->
+        <div class="dock-header">
+          <div class="dock-title-group">
+            <h3><i class="fa-solid fa-sliders" style="color: #ea580c;"></i> Filter PGs by Walking Distance & Amenities</h3>
+            <p>Filter exclusively around Ramaiah Campus (Mathikere & New BEL Road)</p>
+          </div>
+          <div class="gate-pills">
+            <span style="font-size: 0.78rem; font-weight: 700; color: #64748b; margin-right: 4px;">Campus Gate:</span>
+            <button class="gate-pill active" data-gate="all">All Gates</button>
+            <button class="gate-pill" data-gate="Gate 1">Gate 1 (Mathikere)</button>
+            <button class="gate-pill" data-gate="Gate 2">Gate 2 (Main Gate)</button>
+            <button class="gate-pill" data-gate="Gate 10">Gate 10 (Sports Block)</button>
+          </div>
+        </div>
+
+        <!-- Dock Controls Grid -->
+        <div class="dock-controls-grid">
+          <!-- Text Search Field -->
+          <div class="dock-field">
+            <label><i class="fa-solid fa-magnifying-glass"></i> Search PG Name / Street</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <input type="text" id="searchInput" placeholder="e.g. Stanza, Zolo, Mathikere 1st Main, New BEL Rd...">
+            </div>
+          </div>
+
+          <!-- Gender Filter -->
+          <div class="dock-field">
+            <label><i class="fa-solid fa-user-group"></i> Resident Type</label>
+            <div class="select-wrapper">
+              <select id="genderFilter">
+                <option value="all">All (Boys, Girls & Unisex)</option>
+                <option value="boys">Boys PGs & Hostels</option>
+                <option value="girls">Girls PGs & Hostels</option>
+                <option value="unisex">Unisex Co-Living</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Max Budget Slider -->
+          <div class="dock-field">
+            <label>
+              <span>Max Budget:</span>
+              <b id="priceDisplay" style="color: #ea580c;">₹20,000</b>
+            </label>
+            <input type="range" id="priceFilter" min="5000" max="25000" step="500" value="20000" style="accent-color: #ea580c; width: 100%; height: 6px; margin-top: 10px;">
+          </div>
+
+          <!-- Sort Filter -->
+          <div class="dock-field">
+            <label><i class="fa-solid fa-arrow-down-wide-short"></i> Sort Results</label>
+            <div class="select-wrapper">
+              <select id="sortSelect">
+                <option value="recommended">Recommended (Proximity)</option>
+                <option value="distance">Distance (Closest First)</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Google Rating (Highest)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Search Action Button -->
+          <button class="btn-dock-search" onclick="document.getElementById('listings').scrollIntoView({behavior: 'smooth'})">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Find PGs</span>
+          </button>
+        </div>
+
+        <!-- Filter Chips Row (Amenities fast selection) -->
+        <div class="filter-chips-row">
+          <div class="chips-group">
+            <span class="chip-label">Quick Amenities:</span>
+            <button class="filter-chip" data-amenity="WiFi"><i class="fa-solid fa-wifi"></i> WiFi</button>
+            <button class="filter-chip" data-amenity="3 Times Food"><i class="fa-solid fa-utensils"></i> 3 Times Food</button>
+            <button class="filter-chip" data-amenity="AC Available"><i class="fa-solid fa-snowflake"></i> AC Rooms</button>
+            <button class="filter-chip" data-amenity="Attached Washroom"><i class="fa-solid fa-bath"></i> Attached Bath</button>
+            <button class="filter-chip" data-amenity="Power Backup"><i class="fa-solid fa-bolt"></i> Power Backup</button>
+            <button class="filter-chip" data-amenity="Gym"><i class="fa-solid fa-dumbbell"></i> In-House Gym</button>
+          </div>
+          <button id="clearFiltersBtn" class="clear-filters-btn">
+            <i class="fa-solid fa-rotate-left"></i> Reset All Filters
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS & TRUST PROOF BANNER
+       ============================================================ -->
+  <section class="trust-banner">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon orange">
+            <i class="fa-solid fa-building-circle-check"></i>
+          </div>
+          <div class="stat-info">
+            <h4>45+</h4>
+            <p>Verified PGs & Hostels</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon blue">
+            <i class="fa-solid fa-person-walking"></i>
+          </div>
+          <div class="stat-info">
+            <h4>100m - 500m</h4>
+            <p>Walk to MSRIT Gates</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon green">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="stat-info">
+            <h4>4.8 &starf;</h4>
+            <p>1,240+ Google Reviews</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon purple">
+            <i class="fa-solid fa-handshake-simple"></i>
+          </div>
+          <div class="stat-info">
+            <h4>₹0</h4>
+            <p>Zero Brokerage Always</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PG & HOSTEL LISTINGS SECTION
+       ============================================================ -->
+  <section id="listings" class="listings-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">
+            <i class="fa-solid fa-compass"></i> CURATED STUDENT RESIDENCES
+          </span>
+          <h2 class="section-title">Hostels & PGs Near MSRIT Bangalore</h2>
+          <p class="section-desc">Handpicked accommodations with verified room photos, current bed counts, and student reviews.</p>
+        </div>
+        <div class="view-controls">
+          <span id="resultsCount" class="results-count">Loading listings...</span>
+        </div>
+      </div>
+
+      <!-- Dynamic Cards Grid (Rendered by app.js) -->
+      <div id="pgGrid" class="pg-grid">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTERACTIVE CAMPUS PROXIMITY & LOCAL MAP GUIDE
+       ============================================================ -->
+  <section id="mapGuide" class="campus-map-section">
+    <div class="container">
+      <div class="map-layout-grid">
+        <!-- Left: Interactive Map Graphic -->
+        <div class="map-card-graphic">
+          <div style="margin-bottom: 16px;">
+            <span style="font-size: 0.75rem; font-weight: 800; color: #ea580c; text-transform: uppercase; letter-spacing: 0.08em;">GEOGRAPHIC PROXIMITY</span>
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: #0f172a;">MSRIT Campus & PG Clusters</h3>
+            <p style="font-size: 0.85rem; color: #64748b;">Click on pins to inspect nearby student residences</p>
+          </div>
+
+          <div class="interactive-mock-map">
+            <!-- Central College Pin -->
+            <div class="college-landmark-pin">
+              <span class="radar-wave"></span>
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>MSRIT Campus</span>
+            </div>
+
+            <!-- Surrounding Interactive Pins -->
+            <div class="pg-marker pg-marker-1" data-target="stanza-poznan" title="Stanza Poznan (180m)">
+              <i class="fa-solid fa-bed"></i> 180m • Stanza
+            </div>
+            <div class="pg-marker pg-marker-2" data-target="royal-comforts" title="Royal Comforts (110m)">
+              <i class="fa-solid fa-bed"></i> 110m • Royal Comforts
+            </div>
+            <div class="pg-marker pg-marker-3" data-target="serenity-elite" title="Serenity Elite (150m)">
+              <i class="fa-solid fa-bed"></i> 150m • Serenity Girls
+            </div>
+            <div class="pg-marker pg-marker-4" data-target="olive-emerald" title="Olive Emerald (650m)">
+              <i class="fa-solid fa-bed"></i> 650m • New BEL Rd
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Campus Zones Overview -->
+        <div>
+          <span class="section-tag"><i class="fa-solid fa-location-dot"></i> LOCALITY INSIGHTS</span>
+          <h2 class="section-title">Where Do MSRIT Students Live?</h2>
+          <p class="section-desc" style="margin-bottom: 24px;">The three most popular student hubs around Ramaiah Institute of Technology:</p>
+
+          <div class="map-clusters-list">
+            <div class="cluster-card">
+              <div>
+                <h4 class="cluster-title">Mathikere 1st & 2nd Main (Gate 1 & 2)</h4>
+                <p class="cluster-desc">Closest to college. Packed with stationery shops, photocopying, xerox centers, and student eateries.</p>
+              </div>
+              <span class="cluster-time-badge">🚶 2 - 3 Mins Walk</span>
+            </div>
+
+            <div class="cluster-card">
+              <div>
+                <h4 class="cluster-title">MSR Nagar / Ramaiah Medical Block</h4>
+                <p class="cluster-desc">Quiet and safe area, popular among engineering and medical students. High presence of ladies PGs.</p>
+              </div>
+              <span class="cluster-time-badge">🚶 1 - 4 Mins Walk</span>
+            </div>
+
+            <div class="cluster-card">
+              <div>
+                <h4 class="cluster-title">New BEL Road & Ramaiah Enclave</h4>
+                <p class="cluster-desc">Vibrant lifestyle avenue with branded food chains (Starbucks, McDonald's, Chai Point), book cafes, and gyms.</p>
+              </div>
+              <span class="cluster-time-badge">🚴 2 Mins Cycle / 8 Mins Walk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GOOGLE REVIEWS & STUDENT TESTIMONIALS SECTION
+       ============================================================ -->
+  <section id="reviews" class="reviews-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto 36px;">
+        <span class="section-tag" style="justify-content: center;"><i class="fa-brands fa-google"></i> VERIFIED GOOGLE RATINGS</span>
+        <h2 class="section-title">Loved by Students from MSRIT</h2>
+        <p class="section-desc">Read honest feedback from senior students across CSE, ISE, ECE, Mechanical, and Architecture departments.</p>
+      </div>
+
+      <div class="reviews-carousel-grid">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="review-top-bar">
+              <div class="stars-row">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="google-verified-tag">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="14" alt="Google">
+                <span>Google Review</span>
+              </div>
+            </div>
+            <p class="testimonial-quote">
+              "Finding a decent PG near MSRIT used to mean walking through dusty Mathikere lanes bargaining with greedy brokers. findmyhome showed live room photos, honest prices, and zero brokerage. Moved into Stanza Poznan in 1 day!"
+            </p>
+          </div>
+          <div class="testimonial-author-row">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Tanvi" class="author-pic">
+            <div class="author-info">
+              <h4>Tanvi Kulkarni</h4>
+              <p>MSRIT ISE '24 &bull; Stanza Poznan Resident</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="review-top-bar">
+              <div class="stars-row">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="google-verified-tag">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="14" alt="Google">
+                <span>Google Review</span>
+              </div>
+            </div>
+            <p class="testimonial-quote">
+              "The comparison feature is a game changer. I compared Zolo Crown and Royal Comforts side-by-side: food menu, single room rates, generator backup, and gate timings. The 110m walk to Gate 2 saves my attendance!"
+            </p>
+          </div>
+          <div class="testimonial-author-row">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Rohan" class="author-pic">
+            <div class="author-info">
+              <h4>Rohan Varma</h4>
+              <p>MSRIT Mechanical '25 &bull; Royal Comforts</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="review-top-bar">
+              <div class="stars-row">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="google-verified-tag">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="14" alt="Google">
+                <span>Google Review</span>
+              </div>
+            </div>
+            <p class="testimonial-quote">
+              "Safety was the number one priority for my parents coming from Delhi. Serenity Elite had biometric entry, active night guards, and good food. The visit booking was seamless without any pushy agents."
+            </p>
+          </div>
+          <div class="testimonial-author-row">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Ananya" class="author-pic">
+            <div class="author-info">
+              <h4>Ananya Deshpande</h4>
+              <p>MSRIT Biotech '24 &bull; Serenity Elite</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STUDENT BUDGET & RENT ESTIMATOR CALCULATOR
+       ============================================================ -->
+  <section id="calculator" class="calculator-section">
+    <div class="calculator-wrapper">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <span class="section-tag" style="color: #fbbf24; justify-content: center;"><i class="fa-solid fa-calculator"></i> BUDGET TRANSPARENCY</span>
+        <h2 class="serif-heading" style="font-size: 2.2rem; margin-bottom: 8px;">MSRIT Student Expense Estimator</h2>
+        <p style="color: #cbd5e1; font-size: 0.92rem;">Calculate your total monthly living cost (room rent + meals + laundry + AC) with no hidden surprises.</p>
+      </div>
+
+      <div class="calc-grid">
+        <!-- Controls Column -->
+        <div class="calc-controls">
+          <div class="calc-group">
+            <label>
+              <span>Room Occupancy Sharing</span>
+              <span style="font-size: 0.75rem; color: #94a3b8;">Choose room size</span>
+            </label>
+            <select id="calcSharing">
+              <option value="6500">Triple Sharing (Budget-Friendly) - ₹6,500/mo</option>
+              <option value="9500" selected>Double Sharing (Most Popular) - ₹9,500/mo</option>
+              <option value="15000">Single Private Room (High Privacy) - ₹15,000/mo</option>
+            </select>
+          </div>
+
+          <div class="calc-group">
+            <label>
+              <span>Food & Mess Plan</span>
+              <span style="font-size: 0.75rem; color: #94a3b8;">Included or opt-out</span>
+            </label>
+            <select id="calcFood">
+              <option value="0">3 Times Daily Food (Included with PG)</option>
+              <option value="1200">Special Non-Veg / Sunday Feast Upgrade (+₹1,200)</option>
+              <option value="-2000">Opt-Out of Dinner (Eat on New BEL Rd) (-₹2,000)</option>
+            </select>
+          </div>
+
+          <label style="font-size: 0.85rem; font-weight: 700; color: #e2e8f0;">Add-On Comforts:</label>
+          <div class="calc-checkboxes">
+            <label class="calc-check-item">
+              <input type="checkbox" id="calcAc">
+              <span>AC Power Unit (+₹1,800)</span>
+            </label>
+            <label class="calc-check-item">
+              <input type="checkbox" id="calcLaundry" checked>
+              <span>Laundry Service (+₹600)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Result Summary Column -->
+        <div class="calc-summary-card">
+          <div class="estimate-label">Estimated Total Monthly Cost</div>
+          <div class="estimate-val" id="calcTotalOutput">₹10,100 <span>/mo</span></div>
+          <p style="font-size: 0.82rem; color: #94a3b8; margin-bottom: 14px;">Includes High-Speed WiFi, Housekeeping & Water</p>
+
+          <div class="calc-breakdown-list">
+            <div class="calc-breakdown-row">
+              <span>Room Base Rent:</span>
+              <b id="calcRentSub">₹9,500</b>
+            </div>
+            <div class="calc-breakdown-row">
+              <span>Food Plan:</span>
+              <b id="calcFoodSub">₹0</b>
+            </div>
+            <div class="calc-breakdown-row">
+              <span>AC Electricity:</span>
+              <b id="calcAcSub">₹0</b>
+            </div>
+            <div class="calc-breakdown-row">
+              <span>Laundry & Ironing:</span>
+              <b id="calcLaundrySub">₹600</b>
+            </div>
+            <div class="calc-breakdown-row" style="border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 8px; margin-top: 8px; color: #fbbf24;">
+              <span>Expected Refundable Deposit:</span>
+              <b id="calcDepositOutput">₹9,500</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MSRIT STUDENT FAQ ACCORDION
+       ============================================================ -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+        <span class="section-tag" style="justify-content: center;"><i class="fa-solid fa-circle-question"></i> COMMON STUDENT QUERIES</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Answers to common questions from incoming 1st year and senior MSRITians.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>What are the curfew and gate timings for PGs near MSRIT?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            Most girls PGs near MSRIT (such as Serenity Elite and Sri Durga) have biometric closing hours between 10:00 PM and 10:30 PM for safety. Boys and unisex coliving residences (like Stanza Living Poznan and CoHo) offer 24/7 biometric smart-lock access or flexible extension up to 11:30 PM with college ID for project and lab work.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How far are these PGs from the MSRIT classroom blocks?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            All listed properties are within 100 meters to 700 meters of MSRIT Gate 1 (Mathikere), Gate 2 (Main Administrative block), or Gate 10 (Sports complex). You can comfortably walk to class in 2 to 6 minutes, eliminating Bangalore traffic delays.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is food provided on weekends and exam days?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            Yes! All full-service PGs provide breakfast, lunch, and dinner on both Saturdays and Sundays, often featuring special South/North Indian feasts and biryani. Packed lunch boxes are also provided if you have continuous lab schedules inside MSRIT.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do these PGs charge any brokerage or hidden deposit deductions?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            Zero brokerage! When you connect through <b>findmyhome</b>, you deal directly with the property management. The standard security deposit is 1 month's rent (refundable with 30 days departure notice).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What happens during Bangalore BESCOM power outages?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            All featured residences in our catalog have automatic diesel generator power backup that powers bedroom lights, ceiling fans, and high-speed fiber internet routers uninterrupted during study hours.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STICKY BOTTOM COMPARISON FLOATING DRAWER
+       ============================================================ -->
+  <div id="comparisonDrawer" class="comparison-drawer">
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <span style="font-weight: 800; font-size: 0.95rem; white-space: nowrap;">
+        <i class="fa-solid fa-code-compare" style="color: #ea580c;"></i> Compare:
+      </span>
+      <div id="drawerSlots" class="drawer-slots">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <div class="drawer-actions">
+      <button id="btnOpenCompare" class="btn-open-compare">
+        <span>Compare Now</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <button id="btnClearCompare" class="btn-clear-compare">Clear</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SIDE-BY-SIDE COMPARISON MODAL TABLE
+       ============================================================ -->
+  <div id="comparisonModal" class="comparison-modal-wrapper">
+    <div class="comparison-modal-box">
+      <div class="modal-header-bar">
+        <h3><i class="fa-solid fa-code-compare" style="color: #ea580c;"></i> Side-by-Side PG Comparison</h3>
+        <button id="btnCloseCompareModal" class="btn-close-modal">&times;</button>
+      </div>
+      <div id="compareTableContent" class="modal-scroll-area">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PG DETAILS & PHOTO GALLERY FULL MODAL
+       ============================================================ -->
+  <div id="detailModal" class="detail-modal-wrapper">
+    <div class="detail-modal-box">
+      <div class="modal-header-bar">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <b style="font-weight: 900; color: #0f172a;">find<span style="color: #ea580c;">my</span>home</b>
+          <span style="color: #94a3b8;">|</span>
+          <span style="font-size: 0.9rem; font-weight: 700; color: #64748b;">Property Details</span>
+        </div>
+        <button id="btnCloseDetailModal" class="btn-close-modal">&times;</button>
+      </div>
+      <div id="detailModalContent">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCHEDULE VISIT MODAL (Global Trigger)
+       ============================================================ -->
+  <div id="visitFormModal" class="detail-modal-wrapper">
+    <div class="detail-modal-box" style="max-width: 520px;">
+      <div class="modal-header-bar">
+        <h3><i class="fa-solid fa-calendar-check" style="color: #ea580c;"></i> Schedule In-Person Visit</h3>
+        <button id="btnCloseVisitModal" class="btn-close-modal">&times;</button>
+      </div>
+      <div style="padding: 24px;">
+        <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 18px;">
+          Property: <strong id="visitPgNameTarget" style="color: #0f172a;">Selected PG</strong><br>
+          Pick a time slot to inspect the room, test the WiFi, and taste the food.
+        </p>
+        <form id="scheduleVisitForm">
+          <div class="form-group">
+            <label>Student Name</label>
+            <input type="text" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label>Mobile Number (for SMS Confirmation)</label>
+            <input type="tel" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="form-group">
+            <label>Date of Visit</label>
+            <input type="date" required>
+          </div>
+          <div class="form-group">
+            <label>Time Slot</label>
+            <select>
+              <option>Morning (10:00 AM - 1:00 PM)</option>
+              <option>Afternoon (2:00 PM - 5:00 PM)</option>
+              <option>Evening (5:30 PM - 8:00 PM)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit-visit">
+            Confirm Free Visit Appointment
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SUPABASE LIVE ENQUIRIES DASHBOARD MODAL
+       ============================================================ -->
+  <div id="enquiriesModal" class="detail-modal-wrapper">
+    <div class="detail-modal-box" style="max-width: 880px;">
+      <div class="modal-header-bar">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 10px; height: 10px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981;"></div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin: 0;">
+            Supabase Backend: Live Student Enquiries
+          </h3>
+        </div>
+        <button id="btnCloseEnquiriesModal" class="btn-close-modal">&times;</button>
+      </div>
+      <div style="padding: 24px; max-height: 70vh; overflow-y: auto;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <span style="font-size: 0.8rem; font-weight: 700; color: #10b981; background: #ecfdf5; padding: 4px 10px; border-radius: 999px; border: 1px solid #a7f3d0;">
+              🟢 Connected to Project: fetvpsdpcdichvjqzahh
+            </span>
+          </div>
+          <button id="btnRefreshEnquiries" style="font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f1f5f9; padding: 6px 14px; border-radius: 8px; border: 1px solid #cbd5e1;">
+            <i class="fa-solid fa-rotate"></i> Refresh Enquiries
+          </button>
+        </div>
+        <div id="enquiriesTableContainer">
+          <p style="color: #64748b; font-size: 0.9rem;">Loading live enquiries from Supabase database...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- ============================================================
+       SITE FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <h2>find<span style="color: #ea580c;">my</span>home</h2>
+          <p>
+            Bangalore's dedicated student living directory for Ramaiah Institute of Technology (MSRIT). Find safe, comfortable, and verified PGs and hostels without broker commissions.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#listings">Boys PGs Mathikere</a></li>
+            <li><a href="#listings">Girls PGs MSR Nagar</a></li>
+            <li><a href="#listings">Unisex Co-Living New BEL Rd</a></li>
+            <li><a href="#calculator">Rent Calculator</a></li>
+          </ul>
+        </div>
+
+        <!-- Campus Gates -->
+        <div class="footer-col">
+          <h4>MSRIT Gates</h4>
+          <ul class="footer-links">
+            <li><a href="#listings">Gate 1 (Mathikere Main)</a></li>
+            <li><a href="#listings">Gate 2 (Admin Block)</a></li>
+            <li><a href="#listings">Gate 10 (Sports Complex)</a></li>
+            <li><a href="#mapGuide">Ramaiah Medical Gate</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Support -->
+        <div class="footer-col">
+          <h4>Student Helpline</h4>
+          <div class="footer-contact-box">
+            <p><i class="fa-solid fa-phone" style="color: #38bdf8;"></i> +91 98765 43210</p>
+            <p><i class="fa-brands fa-whatsapp" style="color: #22c55e;"></i> WhatsApp Campus Desk</p>
+            <p><i class="fa-solid fa-envelope" style="color: #f59e0b;"></i> hello@findmyhome.in</p>
+            <p><i class="fa-solid fa-location-dot" style="color: #ec4899;"></i> Mathikere 1st Main Rd, Bangalore 560054</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 <b>findmyhome</b>. Built for Ramaiah Institute of Technology Students. All Rights Reserved.</div>
+        <div>Zero Brokerage &bull; Verified Google Reviews &bull; Instant Visits</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Supabase JS Client v2 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
